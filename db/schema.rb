@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120303153829) do
+ActiveRecord::Schema.define(:version => 20120303174810) do
+
+  create_table "privileges", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "privileges", ["name"], :name => "index_privileges_on_name", :unique => true
+
+  create_table "tracks", :force => true do |t|
+    t.string   "title"
+    t.string   "artist"
+    t.string   "albumartist"
+    t.string   "album"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "tracks", ["title", "artist", "album"], :name => "index_tracks_on_title_and_artist_and_album", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "name"
