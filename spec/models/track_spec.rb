@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: tracks
+#
+#  id          :integer         not null, primary key
+#  title       :string(255)
+#  artist      :string(255)
+#  albumartist :string(255)
+#  album       :string(255)
+#  created_at  :datetime        not null
+#  updated_at  :datetime        not null
+#
+
 require 'spec_helper'
 
 describe Track do

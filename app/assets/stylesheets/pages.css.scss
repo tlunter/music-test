@@ -1,0 +1,25 @@
+$full-width: 710px;
+
+$header-size: 48px;
+$header-font1: "Georgia";
+$header-font2: serif;
+
+$footer-size: 10px;
+$footer-font1: "Lucida Grande";
+$footer-font2: sans-serif;
+
+.container
+{
+    width: $full-width;
+    margin: 0 auto;
+}
+
+header
+{
+    font: $header-size $header-font1 $header-font2;
+}
+
+footer
+{
+    font: $footer-size $footer-font1 $footer-font2;    
+}
