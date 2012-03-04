@@ -1,5 +1,6 @@
 <% provide :title, @user.name %>
 <h1>
-    <%= gravatar_for @user %>
-    <%= @user.name %>
+    <span class="gravatar left"><%= gravatar_for @user, size: 80 %></span>
+    <%= @user.name %><br>
+    My link: <%= link_to user_path(@user), @user %>
 </h1>

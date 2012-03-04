@@ -1,0 +1,123 @@
+$full-width: 710px;
+
+$color1: #B5AAA0;
+$color2: #EAEAEA;
+$color3: #AF9280;
+$color4: #3B3B3B;
+$color5: #F4F8F9;
+$text-color: $color4;
+
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    background: $color1;
+    color: $text-color;
+}
+
+.container
+{
+    width: $full-width;
+}
+
+/* Header */
+
+header
+{
+    margin: 20px 15px 0 20px;
+}
+
+header span.title
+{
+    font-weight: bold;
+    font-size: 200%;
+}
+
+/* Navigation */
+
+nav
+{
+    font-size: 100%;
+    float: right;
+    margin-top: 0.5em;
+    padding: 0 0.7em;
+    white-space: nowrap;
+    background: $color5;
+}
+
+nav ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li
+{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.2em 0;
+}
+
+nav ul li a
+{
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+nav ul li a:hover
+{
+    text-decoration: underline;
+}
+
+section
+{
+    background: $color5;
+    margin-top: 1em;
+    padding: 20px;
+    overflow: auto;
+}
+
+section h1
+{
+    font-size: 130%;
+    color: $text-color;
+}
+
+/* Footer */
+
+footer
+{
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/* Links */
+
+a
+{
+    color: $color1;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: $color1;
+    text-decoration: underline;
+}
+
+a:visited
+{
+    color: $color1;
+}
+
+
+.round
+{
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
