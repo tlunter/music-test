@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120304210957) do
+ActiveRecord::Schema.define(:version => 20120309215547) do
 
   create_table "privileges", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,22 @@ ActiveRecord::Schema.define(:version => 20120304210957) do
   end
 
   add_index "privileges", ["name"], :name => "index_privileges_on_name", :unique => true
+
+  create_table "queue_items", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "track_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "settings", :force => true do |t|
+    t.string   "name"
+    t.string   "value"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "settings", ["name"], :name => "index_settings_on_name", :unique => true
 
   create_table "tracks", :force => true do |t|
     t.string   "title"
