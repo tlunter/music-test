@@ -51,4 +51,9 @@ describe "User Pages" do
     it { should have_selector('title', text: user.name) }
   end
 
+  describe "edit page" do
+    let (:user) { FactoryGirl.create(:user) }
+    before { visit edit_user_path(user) }
+  end
+
 end
