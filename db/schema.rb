@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120309215547) do
+ActiveRecord::Schema.define(:version => 20120309222404) do
 
   create_table "privileges", :force => true do |t|
     t.string   "name"
@@ -48,6 +48,13 @@ ActiveRecord::Schema.define(:version => 20120309215547) do
   end
 
   add_index "tracks", ["title", "artist", "album"], :name => "index_tracks_on_title_and_artist_and_album", :unique => true
+
+  create_table "user_privileges", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "privilege_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

@@ -10,4 +10,9 @@ FactoryGirl.define do
     albumartist "Day.din"
     album "A Place to be Real"
   end
+  factory :privilege do
+    name "Queue Tracks"
+    description "Can add tracks to the queue to be listened to"
+  end
+
 end
